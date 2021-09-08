@@ -1,18 +1,17 @@
 let sidebar = document.querySelector(".sidebar")
-let closeBtn = document.querySelector("#btn")
 let menuBtn = document.querySelector(".menu-btn")
 let toggleBtn = document.querySelector(".toggle-theme")
 let body = document.querySelector("body")
 let scrollLine = document.querySelector(".scroll-line")
+let toggleMode = document.querySelector("#themeButton")
 
-closeBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open")
   menuBtn.classList.toggle("open")
 })
 
-toggleBtn.addEventListener("click", () => {
-  toggleBtn.classList.toggle("active")
-  body.classList.toggle("dark");
+toggleMode.addEventListener("click", () => {
+	body.classList.toggle("light")
 })
 
 window.addEventListener("scroll", function(){
