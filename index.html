@@ -4,24 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css.map">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/owl.carrousel.min.js"></script>
+  <link rel="stylesheet" href="css/owl.carrousel.min.css">
   <title>Arreaum</title>
 </head>
 
 <body>
   <nav class="sidebar">
     <ul class="sidebar-nav">
+      <span class="bottom-border"></span>
       <li class="logo">
-        <a href="#" class="sidebar-link">
+        <div class="sidebar-link">
           <span class="link-text logo-text">Arreaum</span>
           <div class="menu-btn" id="btn">
             <div class="menu-btn-burguer"></div>
           </div>
-        </a>
+        </div>
       </li>
 
       <li class="sidebar-item">
@@ -33,7 +35,7 @@
       </li>
 
       <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
+        <a href="#container" class="sidebar-link">
           <i class="fas fa-tools"></i>
           <span class="link-text">Projects</span>
         </a>
@@ -41,7 +43,7 @@
       </li>
 
       <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
+        <a href="contact.html" class="sidebar-link">
           <i class="fas fa-comment-dots"></i>
           <span class="link-text">Contact</span>
         </a>
@@ -49,14 +51,14 @@
       </li>
 
       <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
+        <a href="https://github.com/arriaoedu123/" target="_blank" class="sidebar-link">
           <i class="fab fa-github"></i>
           <span class="link-text">GitHub Profile</span>
         </a>
         <span class="tooltip">GitHub Profile</span>
       </li>
       <li class="sidebar-item" id="themeButton">
-        <a href="#" class="sidebar-link">
+        <a class="sidebar-link">
           <i class="fas fa-sun theme-icon" id="darkIcon"></i>
           <i class="fas fa-moon theme-icon" id="lightIcon"></i>
           <div class="theme-desc"></div>
@@ -67,37 +69,156 @@
 
   <main>
     <section class="section-one">
-          <h1>Hello, my name is Arreaum</h1> 
-          <div class="scroll-line-div">
-            <span class="scroll-line"></span>
-            <label class="scroll-text">Scroll</label>
-          </div> 
-      </section>
-      <section class="container-fluid">
-          <div class="content-container container">
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>
-            dashduiasdhsaiudashdasuhduisahdadusia<br>       
+      <div class="title">
+        <div class="title-text">
+          <h1>Hello, I'am <a href="https://github.com/arriaoedu123/" target="_blank">Arreaum</a></h1>
+        </div>
+      </div>      
+      <div class="scroll-line-div">
+        <span class="scroll-line"></span>
+        <i class="fas fa-mouse"></i>
+      </div> 
+    </section>
+    <section class="container-fluid" id="container">
+          <div class="content-container">
+            <div class="main-project-title typing-effect">
+              <h2>Main Projects</h2>
+            </div>
+            <section class="main-project">
+                <div class="proj1">
+                  <span class="image-desc">
+                    <label class="image-title">PokéAPI Pokédex</label>
+                    <p><a href="https://github.com/arriaoedu123/" target="_blank">Arreaum</a> - 08/27/2021</p>
+                  </span>
+                  <a href="https://arriaoedu123.github.io/pokeapi-pokedex/" target="_blank" class="project-image"></a>
+                </div>
+                <div class="proj2">
+                  <span class="image-desc">
+                    <label class="image-title">Detect AdBlock</label>
+                    <p><a href="https://github.com/arriaoedu123/" target="_blank">Arreaum</a> - 08/16/2021</p>
+                  </span>
+                  <a href="https://arriaoedu123.github.io/web-projects/project10-detect-adblock/index.html" target="_blank" class="project-image"></a>
+                </div>
+                <div class="proj3">
+                  <span class="image-desc">
+                    <label class="image-title">Detect Browser</label>
+                    <p><a href="https://github.com/arriaoedu123/" target="_blank">Arreaum</a> - 08/16/2021</p>
+                  </span>
+                  <a href="https://arriaoedu123.github.io/web-projects/project11-detect-browser/index.html" class="project-image"></a>
+                </div>
+                <div class="proj4">
+                  <span class="image-desc">
+                    <label class="image-title">Navbar</label>
+                    <p><a href="https://github.com/arriaoedu123/" target="_blank">Arreaum</a> - 09/03/2021</p>
+                  </span>
+                  <a href="https://arriaoedu123.github.io/web-projects/project08-navbar/index.html" target="_blank" class="project-image"></a>
+                </div>
+            </section>
+            <section class="recent-posts">
+              <div class="recent-posts-title typing-effect">
+                <h2>Recent Posts</h2>
+              </div>
+              <div class="carousel owl-carousel">
+                <a href="https://arriaoedu123.github.io/web-projects/project12-youtube-thumbnail-downloader/index.html" target="_blank" class="card-proj">
+                   <img src="img/youtube_thumbnail_downloader.png">
+                   <p>Youtube Thumbnail Downloader</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project10-detect-adblock/index.html" target="_blank" class="card-proj">
+                   <img src="img/detect_adblock.png">
+                   <p>Detect AdBLock</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project11-detect-browser/index.html" target="_blank" class="card-proj">
+                   <img src="img/detect_browser.png">
+                   <p>Detect Browser</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project09-neumorphism_design/index.html" target="_blank" class="card-proj">
+                   <img src="img/neumorphism_design.png">
+                   <p>Neumorphism Design</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project05-password_generator/index.html" target="_blank" class="card-proj">
+                   <img src="img/password_generator.png">
+                   <p>Password Generator</p>
+                </a>
+              </div>
+            </section>
+            <section class="all-js-projects">
+              <div class="all-js-title typing-effect">
+                <h2>All JavaScript Projects</h2>
+              </div>
+              <div class="carousel owl-carousel">
+                <a href="https://arriaoedu123.github.io/pokeapi-pokedex/" target="_blank" class="card-proj card-proj-1">
+                   <img src="img/pokedex.png">
+                   <p>PokéAPI Pokédex</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project12-youtube-thumbnail-downloader/index.html" target="_blank" class="card-proj">
+                   <img src="img/youtube_thumbnail_downloader.png">
+                   <p>Youtube Thumbnail Downloader</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project11-detect-browser/index.html" target="_blank" class="card-proj">
+                   <img src="img/detect_browser.png">
+                   <p>Detect Browser</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project10-detect-adblock/index.html" target="_blank" class="card-proj">
+                   <img src="img/detect_adblock.png">
+                   <p>Detect AdBlock</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project09-neumorphism_design/index.html" target="_blank" class="card-proj">
+                   <img src="img/neumorphism_design.png">
+                   <p>Neumorphism Design</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project08-navbar/index.html" target="_blank" class="card-proj">
+                   <img src="img/navbar.png">
+                   <p>Navbar</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project07-countdown_timer/index.html" target="_blank" class="card-proj">
+                   <img src="img/countdown_timer.png">
+                   <p>Countdown Timer</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project06-pricing_cards/index.html" target="_blank" class="card-proj">
+                   <img src="img/pricing_cards.png">
+                   <p>Pricing Cards</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project05-password_generator/index.html" target="_blank" class="card-proj">
+                   <img src="img/password_generator.png">
+                   <p>Password Generator</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project04-todo_list/index.html" target="_blank" class="card-proj">
+                   <img src="img/todo_list.png">
+                   <p>To-Do List</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project03-analog_clock/index.html" target="_blank" class="card-proj">
+                   <img src="img/analog_clock.png">
+                   <p>Analog Clock</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project02-login_form/index.html" target="_blank" class="card-proj">
+                   <img src="img/login_form.png">
+                   <p>Login Form</p>
+                </a>
+                <a href="https://arriaoedu123.github.io/web-projects/project01-simple_calculator/index.html" target="_blank" class="card-proj">
+                   <img src="img/simple_calculator.png">
+                   <p>Simple Calculator</p>
+                </a>
+              </div>
+            </section>
+            <section class="websites">
+              <div class="websites-title typing-effect">
+                <h2>Websites</h2>
+              </div>
+              <div class="carousel-website owl-carousel">
+                <a href="https://arriaoedu123.github.io/website-projects/project01-hardware-store/index.html" target="_blank" class="card-proj">
+                   <img src="img/hardware_store.png">
+                </a>
+                <a href="https://arriaoedu123.github.io/website-projects/project02-gym-website/index.html" target="_blank" class="card-proj">
+                   <img src="img/gym_website.png">
+                </a>
+              </div>
+            </section>
+            
           </div>
-      </section>
+    </section>
   </main>
 
-  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
   <script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
