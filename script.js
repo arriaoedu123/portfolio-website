@@ -9,7 +9,7 @@ let mainProjectTitle = document.querySelector(".main-project-title")
 let recentPostsTitle = document.querySelector(".recent-posts-title")
 let allJsTitle = document.querySelector(".all-js-title")
 let websitesTitle = document.querySelector(".websites-title")
-let bottomBorder = document.querySelector(".bottom-border")
+let bottomBorder = document.querySelector(".left-border")
 
 menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open")
@@ -20,27 +20,39 @@ toggleMode.addEventListener("click", () => {
 	body.classList.toggle("light")
 })
 
-window.addEventListener("scroll", function(){
+reveal()
 
-  if (window.scrollY == 0) 
-     { scrollLine.classList.remove('animate') }
-  if (window.scrollY > 0) 
-     { scrollLine.classList.add('animate') }
-  if (window.scrollY <=  50) 
-     { bottomBorder.style.top = "6rem" }
-  if (window.scrollY >= 102) 
-     { bottomBorder.style.top = "11rem" }
-  if ( window.scrollY >= 0 && window.scrollY <= 314)
-     { titleText.classList.add('animate-title') }
-  if (window.scrollY >= 102 && window.scrollY <= 731) 
-     { mainProjectTitle.classList.add('animate-main') }
-  if (window.scrollY >= 765 && window.scrollY <= 1393) 
-     { recentPostsTitle.classList.add('animate-recent') }
-  if (window.scrollY >= 1203 && window.scrollY <= 1829)
-     { allJsTitle.classList.add('animate-all-js') }
-  if (window.scrollY >= 1645 && window.scrollY <= 2265)
-     { websitesTitle.classList.add('animate-web') }
-})
+window.addEventListener('scroll', reveal);
+   function reveal() {
+      var reveals = document.querySelectorAll('.typing-effect')
+      var revealsImg = document.querySelectorAll('.image')
+
+      for (var i = 0; i < reveals.length; i++) {
+
+       var windowheight = window.innerHeight
+       var revealtop = reveals[i].getBoundingClientRect().top
+
+       if (revealtop < windowheight) {
+        reveals[i].classList.add('active')
+     }
+   }
+
+   for (var i = 0; i < revealsImg.length; i++) {
+
+       var windowheight = window.innerHeight
+       var revealtop = revealsImg[i].getBoundingClientRect().top
+
+       if (revealtop < windowheight) {
+        revealsImg[i].classList.add('load')
+     }
+   }
+
+   if (window.scrollY < 200) {
+      bottomBorder.style.top = "96px"
+   } else {
+      bottomBorder.style.top = "176px"
+   }
+}
 
 $(".carousel").owlCarousel({
   margin: 20,
@@ -62,7 +74,7 @@ $(".carousel").owlCarousel({
      nav: false
    }
  }
-});
+})
 
 $(".carousel-website").owlCarousel({
   nav: true,
@@ -76,20 +88,4 @@ $(".carousel-website").owlCarousel({
   itemsTablet: false,
   itemsMobile: false
 
-});
-
-if (window.scrollY <=  50)
-   { bottomBorder.style.top = "6rem" }
-if (window.scrollY >= 102) 
-   { bottomBorder.style.top = "11rem" 
-     scrollLine.classList.add('animate') }
-if ( window.scrollY >= 0 && window.scrollY <= 314)
-   { titleText.classList.add('animate-title') }
-if (window.scrollY >= 102 && window.scrollY <= 731) 
-   { mainProjectTitle.classList.add('animate-main') }
-if (window.scrollY >= 765 && window.scrollY <= 1393) 
-   { recentPostsTitle.classList.add('animate-recent') }
-if (window.scrollY >= 1203 && window.scrollY <= 1829)
-   { allJsTitle.classList.add('animate-all-js') }
-if (window.scrollY >= 1645 && window.scrollY <= 2265)
-   { websitesTitle.classList.add('animate-web') }
+})
