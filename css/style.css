@@ -1,19 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 :root {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  --text-primary: #b6b6b6;
-  --nav-shadow: 182, 182, 182;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
 }
 
 * {
-  transition: background 0.6s ease,
-              color 0.3s ease,
-              width 0.6s ease,
+  transition: width 0.6s ease,
               left 0.6s ease,
               opacity 0.6s ease;
 }
@@ -40,7 +34,7 @@ a {
 */
 
 .sidebar {
-  position: fixed;
+  /*position: fixed;*/
   background-color: var(--bg-primary);
   z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -50,11 +44,8 @@ a {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: 100%;
-  position: relative;
+  /*position: relative;*/
 }
 
 .sidebar-item {
@@ -76,9 +67,9 @@ a {
 .left-border-contact {
   width: 100%;
   height: 5rem;
-  position: absolute;
+  /*position: absolute;*/
   border-left: 5px solid var(--text-secondary);
-  pointer-events: none;
+  /*pointer-events: none;*/
   transition: top 0.3s ease;
   top: 96px;
   background: -webkit-linear-gradient(90deg, var(--nav-shadow); opacity: 0.7,rgba(0,0,0,0) 40%,rgba(0,0,0,0));
@@ -142,10 +133,10 @@ a {
 }
 
 .menu-btn {
-  position: relative;
+  /*position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -164,8 +155,8 @@ a {
   transition: all .5s ease-in-out;
 }
 
-.menu-btn-burguer::before,
-.menu-btn-burguer::after {
+.menu-btn-burguer:before,
+.menu-btn-burguer:after {
   content: '';
   position: absolute;
   width: 30px;
@@ -176,11 +167,11 @@ a {
   transition: all .5s ease-in-out;
 }
 
-.menu-btn-burguer::before {
+.menu-btn-burguer:before {
   transform: translateY(-10px);
 }
 
-.menu-btn-burguer::after {
+.menu-btn-burguer:after {
   transform: translateY(10px);
 }
 
@@ -252,11 +243,11 @@ a {
 */
 
 .section-one {
-  position: relative;
+  /*position: relative;*/
   width: 100%;
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
   min-height: 100vh;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
@@ -266,22 +257,21 @@ a {
   opacity: 0;
 }
 
-.image.load {
+.image.active {
   opacity: 1;
 }
 
 .scroll-line-div {
-  display: flex;
+  /*display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
+  position: absolute;*/
   bottom: 2rem;
 }
 
 .scroll-line {
   z-index: 20;
-  display: block;
   width: 2px;
   height: 80px;
   margin-left: -1px;
@@ -390,15 +380,10 @@ a {
 }
 
 .container-fluid {
-  display: flex;
-  justify-content: center;
   padding-bottom: 5rem;
 }
 
 .content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 5rem;
   width: 95%;
 }
@@ -443,10 +428,6 @@ a {
   pointer-events: auto;
 }
 
-.image-desc a:hover {
-  color: #0a58ca;
-}
-
 .proj3 .image-desc p,
 .proj4 .image-desc p {
   font-size: 0.8rem;
@@ -456,7 +437,6 @@ a {
   width: 100%;
   height: 100%;
   display: block;
-  transition: background-size 0.3s ease;
 }
 
 .proj1 .project-image {
@@ -807,7 +787,15 @@ a {
   }
 }
 
-.light {
+body.dark {
+  --text-primary: #b6b6b6;
+  --nav-shadow: 182, 182, 182;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+}
+
+body.light {
   --text-primary: #1f1f1f;
   --nav-shadow: 31, 31, 31;
   --text-secondary: #000000;

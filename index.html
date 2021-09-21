@@ -14,13 +14,13 @@
 </head>
 
 <body>
-  <nav class="sidebar">
-    <ul class="sidebar-nav">
-      <div class="left-border"></div>
+  <nav class="sidebar position-fixed">
+    <ul class="sidebar-nav position-relative d-flex flex-column align-items-center">
+      <div class="left-border position-absolute pe-none"></div>
       <li class="logo">
         <div class="sidebar-link">
           <span class="link-text logo-text">Arreaum</span>
-          <div class="menu-btn" id="btn">
+          <div class="menu-btn position-relative d-flex justify-content-center align-items-center" id="btn">
             <div class="menu-btn-burguer"></div>
           </div>
         </div>
@@ -43,11 +43,11 @@
       </li>
 
       <li class="sidebar-item">
-        <a href="contact.html" class="sidebar-link">
+        <a class="sidebar-link">
           <i class="fas fa-comment-dots"></i>
           <span class="link-text">Contact</span>
         </a>
-        <span class="tooltip">Contact</span>
+        <span class="tooltip">Contact (Soon)</span>
       </li>
 
       <li class="sidebar-item">
@@ -68,19 +68,20 @@
   </nav>
 
   <main>
-    <section class="section-one">
+    <section class="section-one position-relative d-flex justify-content-center align-items-center">
       <div class="title">
         <div class="title-text typing-effect">
           <h1>Hello, I'am <a href="https://github.com/arriaoedu123/" target="_blank">Arreaum</a></h1>
         </div>
       </div>      
-      <div class="scroll-line-div">
-        <span class="scroll-line"></span>
+      <div class="scroll-line-div d-flex justify-content-center align-items-center flex-column position-absolute">
+        <span class="scroll-line d-block"></span>
         <i class="fas fa-mouse"></i>
       </div> 
     </section>
-    <section class="container-fluid">
-          <div class="content-container">
+
+    <section class="container-fluid d-flex justify-content-center">
+          <div class="content-container d-flex flex-column align-items-center">
             <div class="main-project-title typing-effect">
               <h2>Main Projects</h2>
             </div>
@@ -114,92 +115,95 @@
                   <a href="https://arriaoedu123.github.io/web-projects/project08-navbar/index.html" target="_blank" class="project-image"></a>
                 </div>
             </section>
+
             <section class="recent-posts">
               <div class="recent-posts-title typing-effect">
                 <h2>Recent Posts</h2>
               </div>
               <div class="carousel owl-carousel">
-                <a class="image" href="https://arriaoedu123.github.io/web-projects/project12-youtube-thumbnail-downloader/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project12-youtube-thumbnail-downloader/index.html" target="_blank" class="card-proj">
                    <img src="img/youtube_thumbnail_downloader.png">
                    <p>Youtube Thumbnail Downloader</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project10-detect-adblock/index.html" target="_blank" class="card-proj image">
-                   <img class="image" src="img/detect_adblock.png">
+                <a href="https://arriaoedu123.github.io/web-projects/project10-detect-adblock/index.html" target="_blank" class="card-proj">
+                   <img src="img/detect_adblock.png">
                    <p>Detect AdBLock</p>
                 </a>
-                <a class="image" href="https://arriaoedu123.github.io/web-projects/project11-detect-browser/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project11-detect-browser/index.html" target="_blank" class="card-proj">
                    <img src="img/detect_browser.png">
                    <p>Detect Browser</p>
                 </a>
-                <a class="image" href="https://arriaoedu123.github.io/web-projects/project09-neumorphism_design/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project09-neumorphism_design/index.html" target="_blank" class="card-proj">
                    <img src="img/neumorphism_design.png">
                    <p>Neumorphism Design</p>
                 </a>
-                <a class="image" href="https://arriaoedu123.github.io/web-projects/project05-password_generator/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project05-password_generator/index.html" target="_blank" class="card-proj">
                    <img src="img/password_generator.png">
                    <p>Password Generator</p>
                 </a>
               </div>
             </section>
+
             <section class="all-js-projects">
               <div class="all-js-title typing-effect">
                 <h2>All JavaScript Projects</h2>
               </div>
               <div class="carousel owl-carousel">
-                <a href="https://arriaoedu123.github.io/pokeapi-pokedex/" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/pokeapi-pokedex/" target="_blank" class="card-proj">
                    <img src="img/pokedex.png">
                    <p>PokéAPI Pokédex</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project12-youtube-thumbnail-downloader/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project12-youtube-thumbnail-downloader/index.html" target="_blank" class="card-proj">
                    <img src="img/youtube_thumbnail_downloader.png">
                    <p>Youtube Thumbnail Downloader</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project11-detect-browser/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project11-detect-browser/index.html" target="_blank" class="card-proj">
                    <img src="img/detect_browser.png">
                    <p>Detect Browser</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project10-detect-adblock/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project10-detect-adblock/index.html" target="_blank" class="card-proj">
                    <img src="img/detect_adblock.png">
                    <p>Detect AdBlock</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project09-neumorphism_design/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project09-neumorphism_design/index.html" target="_blank" class="card-proj">
                    <img src="img/neumorphism_design.png">
                    <p>Neumorphism Design</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project08-navbar/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project08-navbar/index.html" target="_blank" class="card-proj">
                    <img src="img/navbar.png">
                    <p>Navbar</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project07-countdown_timer/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project07-countdown_timer/index.html" target="_blank" class="card-proj">
                    <img src="img/countdown_timer.png">
                    <p>Countdown Timer</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project06-pricing_cards/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project06-pricing_cards/index.html" target="_blank" class="card-proj">
                    <img src="img/pricing_cards.png">
                    <p>Pricing Cards</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project05-password_generator/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project05-password_generator/index.html" target="_blank" class="card-proj">
                    <img src="img/password_generator.png">
                    <p>Password Generator</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project04-todo_list/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project04-todo_list/index.html" target="_blank" class="card-proj">
                    <img src="img/todo_list.png">
                    <p>To-Do List</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project03-analog_clock/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project03-analog_clock/index.html" target="_blank" class="card-proj">
                    <img src="img/analog_clock.png">
                    <p>Analog Clock</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project02-login_form/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project02-login_form/index.html" target="_blank" class="card-proj">
                    <img src="img/login_form.png">
                    <p>Login Form</p>
                 </a>
-                <a href="https://arriaoedu123.github.io/web-projects/project01-simple_calculator/index.html" target="_blank" class="card-proj image">
+                <a href="https://arriaoedu123.github.io/web-projects/project01-simple_calculator/index.html" target="_blank" class="card-proj">
                    <img src="img/simple_calculator.png">
                    <p>Simple Calculator</p>
                 </a>
               </div>
             </section>
+
             <section class="websites">
               <div class="websites-title typing-effect">
                 <h2>Websites</h2>
