@@ -10,49 +10,47 @@ let recentPostsTitle = document.querySelector(".recent-posts-title")
 let allJsTitle = document.querySelector(".all-js-title")
 let websitesTitle = document.querySelector(".websites-title")
 let bottomBorder = document.querySelector(".left-border")
+let reveals = document.querySelectorAll('.typing-effect')
+let revealsImg = document.querySelectorAll('.image')
 
 menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open")
   menuBtn.classList.toggle("open")
 })
 
-toggleMode.addEventListener("click", () => {
-	body.classList.toggle("light")
-})
+const reveal = () => {
+
+  for (let i = 0; i < reveals.length; i++) {
+
+    let windowheight = window.innerHeight
+    let revealTop = reveals[i].getBoundingClientRect().top
+
+    if (revealTop < windowheight) {
+      reveals[i].classList.add('active')
+    }
+
+  }
+
+  for (let i = 0; i < revealsImg.length; i++) {
+
+    let windowheight = window.innerHeight
+    let revealTopImg = revealsImg[i].getBoundingClientRect().top
+
+    if (revealTopImg < windowheight) {
+      revealsImg[i].classList.add('active')
+    }
+
+  }
+
+  if (window.scrollY < 200) {
+    bottomBorder.style.top = "96px"
+  } else {
+    bottomBorder.style.top = "176px"
+  }
+}
 
 reveal()
-
-window.addEventListener('scroll', reveal);
-   function reveal() {
-      var reveals = document.querySelectorAll('.typing-effect')
-      var revealsImg = document.querySelectorAll('.image')
-
-      for (var i = 0; i < reveals.length; i++) {
-
-       var windowheight = window.innerHeight
-       var revealtop = reveals[i].getBoundingClientRect().top
-
-       if (revealtop < windowheight) {
-        reveals[i].classList.add('active')
-     }
-   }
-
-   for (var i = 0; i < revealsImg.length; i++) {
-
-       var windowheight = window.innerHeight
-       var revealtop = revealsImg[i].getBoundingClientRect().top
-
-       if (revealtop < windowheight) {
-        revealsImg[i].classList.add('load')
-     }
-   }
-
-   if (window.scrollY < 200) {
-      bottomBorder.style.top = "96px"
-   } else {
-      bottomBorder.style.top = "176px"
-   }
-}
+window.addEventListener('scroll', reveal)
 
 $(".carousel").owlCarousel({
   margin: 20,
@@ -82,10 +80,30 @@ $(".carousel-website").owlCarousel({
   autoplay: true,
   autoplayTimeout: 5000,
   autoplayHoverPause: true,
-  items: 1, 
+  items: 1,
   itemsDesktop: false,
   itemsDesktopSmall: false,
   itemsTablet: false,
   itemsMobile: false
 
+})
+
+if (localStorage.getItem("ClassName") !== null) {
+  $("body").addClass(localStorage.getItem('ClassName'))
+} else {
+  $("body").addClass("dark")
+}
+
+$("#themeButton").on("click", function() {
+  if ($("body").hasClass('dark')) {
+
+    $("body").removeClass("dark").addClass("light")
+    localStorage.setItem('ClassName', 'light')
+
+  } else {
+
+    $("body").removeClass("light").addClass("dark")
+    localStorage.setItem('ClassName', 'dark')
+
+  }
 })
