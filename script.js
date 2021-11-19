@@ -1,17 +1,19 @@
-let sidebar = document.querySelector(".sidebar")
-let menuBtn = document.querySelector(".menu-btn")
-let toggleBtn = document.querySelector(".toggle-theme")
-let body = document.querySelector("body")
-let titleText = document.querySelector(".title-text")
-let scrollLine = document.querySelector(".scroll-line-div")
-let toggleMode = document.querySelector("#themeButton")
-let mainProjectTitle = document.querySelector(".main-project-title")
-let recentPostsTitle = document.querySelector(".recent-posts-title")
-let allJsTitle = document.querySelector(".all-js-title")
-let websitesTitle = document.querySelector(".websites-title")
-let bottomBorder = document.querySelector(".left-border")
-let reveals = document.querySelectorAll('.typing-effect')
-let revealsImg = document.querySelectorAll('.image')
+const sidebar = document.querySelector(".sidebar")
+const menuBtn = document.querySelector(".menu-btn")
+const toggleBtn = document.querySelector(".toggle-theme")
+const body = document.querySelector("body")
+const titletext = document.querySelector(".title-text")
+const scrollLine = document.querySelector(".scroll-line-div")
+const toggleMode = document.querySelector("#themeButton")
+const mainProjectTitle = document.querySelector(".main-project-title")
+const recentPostsTitle = document.querySelector(".recent-posts-title")
+const allJsTitle = document.querySelector(".all-js-title")
+const websitesTitle = document.querySelector(".websites-title")
+const leftBorder = document.querySelector(".left-border")
+const reveals = document.querySelectorAll('.typing-effect')
+const revealsImg = document.querySelectorAll('.image')
+const home = document.querySelector(".home")
+const projects = document.querySelector(".projects")
 
 menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open")
@@ -19,13 +21,18 @@ menuBtn.addEventListener("click", () => {
 })
 
 const reveal = () => {
+  const homePos = document.querySelector(".home").getBoundingClientRect()
+  const homeTop = homePos.top
+
+  const projectsPos = document.querySelector(".projects").getBoundingClientRect()
+  const projectsTop = projectsPos.top
 
   for (let i = 0; i < reveals.length; i++) {
 
     let windowheight = window.innerHeight
     let revealTop = reveals[i].getBoundingClientRect().top
 
-    if (revealTop < windowheight) {
+    if (revealTop < windowheight + 20) {
       reveals[i].classList.add('active')
     }
 
@@ -36,17 +43,29 @@ const reveal = () => {
     let windowheight = window.innerHeight
     let revealTopImg = revealsImg[i].getBoundingClientRect().top
 
-    if (revealTopImg < windowheight) {
+    if (revealTopImg < windowheight + 20) {
       revealsImg[i].classList.add('active')
     }
 
   }
 
-  if (window.scrollY < 200) {
-    bottomBorder.style.top = "96px"
-  } else {
-    bottomBorder.style.top = "176px"
-  }
+    if (window.scrollY < 120) {
+      leftBorder.style.top = `${homeTop}px`
+      home.classList.add('active')
+      projects.classList.remove('active')
+    }
+    else { 
+      leftBorder.style.top = `${projectsTop}px`
+      projects.classList.add('active')
+      home.classList.remove('active')
+    }
+
+    if (window.scrollY == 0) {
+      scrollLine.classList.remove('animate')
+    } else {
+      scrollLine.classList.add('animate')
+    }
+      
 }
 
 reveal()
@@ -86,24 +105,4 @@ $(".carousel-website").owlCarousel({
   itemsTablet: false,
   itemsMobile: false
 
-})
-
-if (localStorage.getItem("ClassName") !== null) {
-  $("body").addClass(localStorage.getItem('ClassName'))
-} else {
-  $("body").addClass("dark")
-}
-
-$("#themeButton").on("click", function() {
-  if ($("body").hasClass('dark')) {
-
-    $("body").removeClass("dark").addClass("light")
-    localStorage.setItem('ClassName', 'light')
-
-  } else {
-
-    $("body").removeClass("light").addClass("dark")
-    localStorage.setItem('ClassName', 'dark')
-
-  }
 })
