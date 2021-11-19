@@ -29,10 +29,10 @@ const reveal = () => {
 
   for (let i = 0; i < reveals.length; i++) {
 
-    let windowheight = window.innerHeight
+    let windowheight = window.innerHeight - 80
     let revealTop = reveals[i].getBoundingClientRect().top
 
-    if (revealTop < windowheight + 20) {
+    if (revealTop < windowheight) {
       reveals[i].classList.add('active')
     }
 
@@ -40,10 +40,10 @@ const reveal = () => {
 
   for (let i = 0; i < revealsImg.length; i++) {
 
-    let windowheight = window.innerHeight
+    let windowheight = window.innerHeight - 20
     let revealTopImg = revealsImg[i].getBoundingClientRect().top
 
-    if (revealTopImg < windowheight + 20) {
+    if (revealTopImg < windowheight) {
       revealsImg[i].classList.add('active')
     }
 
