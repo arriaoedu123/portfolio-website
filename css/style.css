@@ -107,6 +107,14 @@ a:hover {
   border: none;
   color: #fff;
   box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: .25rem;
+}
+
+.contact-popup .popup-desc .button-field button:hover {
+  transform: scale(1.07);
 }
 
 .contact-popup .popup-desc .button-field button:nth-child(2) {
