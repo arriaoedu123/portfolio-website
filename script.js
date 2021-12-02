@@ -14,10 +14,44 @@ const reveals = document.querySelectorAll('.typing-effect')
 const revealsImg = document.querySelectorAll('.image')
 const home = document.querySelector(".home")
 const projects = document.querySelector(".projects")
+const contact = document.querySelector(".contact")
+const contactPopUp = document.querySelector(".contact-popup")
+const contactPopUpDesc = document.querySelector(".popup-desc")
+const yesBtn = document.querySelector(".yes-btn")
+const noBtn = document.querySelector(".no-btn")
+const toTop = document.querySelector(".to-top")
 
 menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open")
   menuBtn.classList.toggle("open")
+})
+
+contact.addEventListener("click", () => {
+  contactPopUp.style.display = "flex"
+  contactPopUpDesc.classList.toggle("animate")
+  body.style.overflowY = "hidden"
+})
+
+yesBtn.addEventListener("click", () => {
+  window.location.href = "mailto:contato.aryon@gmail.com"
+  contactPopUpDesc.classList.toggle("animate")
+  setTimeout(function() {
+    contactPopUp.style.display = "none"
+    body.style.overflowY = "auto"
+  }, 500);
+})
+
+noBtn.addEventListener("click", () => {
+  contactPopUpDesc.classList.toggle("animate")
+  setTimeout(function() {
+    contactPopUp.style.display = "none"
+    body.style.overflowY = "auto"
+  }, 500);
+})
+
+toTop.addEventListener("click", () => {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
 })
 
 const reveal = () => {
@@ -62,8 +96,14 @@ const reveal = () => {
 
     if (window.scrollY == 0) {
       scrollLine.classList.remove('animate')
+      toTop.style.opacity = 0
+      setTimeout(function() {
+        toTop.style.visibility = "hidden"
+      }, 600);
     } else {
       scrollLine.classList.add('animate')
+      toTop.style.opacity = 1
+      toTop.style.visibility = "visible"
     }
       
 }
