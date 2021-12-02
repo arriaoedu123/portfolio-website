@@ -83,7 +83,7 @@ a:hover {
   align-items: center;
   text-align: center;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0,0,0,0.3) 0px 5px 15px;
   z-index: 1010;
   color: var(--text-primary);
   padding: 20px;
@@ -106,7 +106,7 @@ a:hover {
   background: #0d6efd;
   border: none;
   color: #fff;
-  box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0,0,0,0.3) 1.95px 1.95px 2.6px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: transform 0.3s;
@@ -135,7 +135,6 @@ a:hover {
   color: var(--bg-primary);
   font-size: 1.5rem;
   cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   z-index: 999;
   opacity: 0;
   visibility: hidden;
@@ -227,6 +226,7 @@ a:hover {
   visibility: hidden;
   margin-left: 1rem;
   white-space: nowrap;
+  text-shadow: 2px 4px 3px var(--text-shadow);
 }
 
 .sidebar-link i {
@@ -234,6 +234,10 @@ a:hover {
   width: 2rem;
   min-width: 2rem;
   margin: 0 1.4rem;
+}
+
+.sidebar-link i::before {
+  text-shadow: 2px 4px 3px var(--text-shadow);
 }
 
 .logo {
@@ -245,6 +249,7 @@ a:hover {
   font-size: 1.5rem;
   letter-spacing: 0.3ch;
   width: 100%;
+  text-shadow: 2px 4px 3px var(--text-shadow);
 }
 
 .logo .sidebar-link {
@@ -290,6 +295,7 @@ a:hover {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .menu-btn-burguer:before {
@@ -368,9 +374,16 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.logotipo {
+  margin-top: -60px;
+  -webkit-animation: roll-in-top 0.6s ease-out both 5.2s;
+          animation: roll-in-top 0.6s ease-out both 5.2s;
 }
 
 .title {
@@ -407,7 +420,7 @@ a:hover {
   background: var(--text-primary);
   transform-origin: top;
   transition: scaleY(0);
-  animation: animate 2.5s infinite 6s forwards;
+  animation: animate 2.5s infinite 5.3s forwards;
   animation-play-state: running;
 }
 
@@ -431,6 +444,7 @@ a:hover {
 
 .typing-effect {
   margin-bottom: 25px;
+  
 }
 
 .title-text h1,
@@ -438,6 +452,7 @@ a:hover {
   position: relative;
   font-family: "Source Code Pro", sans-serif;
   font-size: 2.5rem;
+  text-shadow: 2px 4px 3px var(--text-shadow);
 }
 
 .title-text h1:before,
@@ -447,9 +462,14 @@ a:hover {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  right: -2px;
   bottom: 0;
   left: 0;
+}
+
+.title-text h1:before,
+.typing-effect h2:before {
+  height: 60px;
 }
 
 .title-text.active h1:before {
@@ -531,6 +551,7 @@ a:hover {
   grid-template-areas: 
     "proj1 proj1 proj2 proj2"
     "proj1 proj1 proj3 proj4"; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .proj1 { grid-area: proj1; position: relative; }
@@ -615,6 +636,11 @@ a:hover {
   align-items: center;
 }
 
+.websites .owl-item img {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 3px;
+}
+
 .carousel {
   width: 100%;
   padding: 0 30px;
@@ -648,6 +674,7 @@ a:hover {
 .owl-nav .owl-next {
   font-size: 2rem !important;
   margin: 0 6px;
+  text-shadow: 2px 4px 3px var(--text-shadow);
 }
 
 .owl-dots{
@@ -674,7 +701,8 @@ a:hover {
 }
 
 .carousel.owl-carousel .owl-item img {
-  border-radius: 2px;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .form-control,
@@ -728,7 +756,6 @@ a:hover {
     bottom: 0;
     width: 100vw;
     height: 5rem;
-    overflow-x: scroll;
     overflow-y: hidden;
     background: var(--bg-secondary);
   }
@@ -790,6 +817,11 @@ a:hover {
     justify-content: center;
   }
 
+  .logotipo img {
+    width: 90px;
+    height: 90px;
+  }
+
   .title-text {
     white-space: nowrap;
     padding: 0 1.5rem;
@@ -798,6 +830,10 @@ a:hover {
 
   .title-text h1,
   .typing-effect h2 {
+    font-size: 1.8rem;
+  }
+
+  .all-js-title h2 {
     font-size: 1.5rem;
   }
 
@@ -896,16 +932,18 @@ a:hover {
 
 body.dark {
   --text-primary: #b6b6b6;
-  --nav-shadow: 182, 182, 182;
   --text-secondary: #ececec;
+  --text-shadow: rgba(255,255,255,0.2);
+  --nav-shadow: 182, 182, 182;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
 }
 
 body.light {
   --text-primary: #1f1f1f;
-  --nav-shadow: 31, 31, 31;
   --text-secondary: #000000;
+  --text-shadow: rgba(0,0,0,0.3);
+  --nav-shadow: 31, 31, 31;
   --bg-primary: #ffffff;
   --bg-secondary: #e4e4e4;
 }
@@ -1007,7 +1045,7 @@ body.light {
   }
 }
 
- @-webkit-keyframes slide-in-fwd-center {
+@-webkit-keyframes slide-in-fwd-center {
   0% {
     -webkit-transform: translateZ(-1400px);
             transform: translateZ(-1400px);
@@ -1032,7 +1070,7 @@ body.light {
   }
 }
 
- @-webkit-keyframes slide-out-bck-center {
+@-webkit-keyframes slide-out-bck-center {
   0% {
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
@@ -1054,6 +1092,31 @@ body.light {
     -webkit-transform: translateZ(-1100px);
             transform: translateZ(-1100px);
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes roll-in-top {
+  0% {
+    -webkit-transform: translateY(-800px) rotate(-540deg);
+            transform: translateY(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes roll-in-top {
+  0% {
+    -webkit-transform: translateY(-800px) rotate(-540deg);
+            transform: translateY(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+    opacity: 1;
   }
 }
 
